@@ -15,9 +15,9 @@
             <th>Horseforce</th>
         </tr>
         <tr th:each="car : ${cars}">
-            <td th:utext="${car.getMarka()}">...</td>
-            <td th:utext="${car.getModel()}">...</td>
-            <td th:utext="${car.getHorsepower()}">...</td>
+            <td th:utext="${car.getMarka()}"/>
+            <td th:utext="${car.getModel()}"/>
+            <td th:utext="${car.getHorsepower()}"/>
         </tr>
     </table>
 </div>
