@@ -11,11 +11,13 @@ import java.util.List;
 
 @Controller
 public class CarConroller {
+    @Autowired
+    CarService carService;
 
     @GetMapping(value = "/cars")
     public String printWelcome(HttpServletRequest request,ModelMap model) {
         String s = request.getParameter("count");
-        List<Car> cars =new CarService().getCar((s == null?5:Integer.parseInt(s)));
+        List<Car> cars = carService.getCar((s == null?5:Integer.parseInt(s)));
         model.addAttribute("cars", cars);
         return "cars";
     }

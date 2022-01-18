@@ -1,15 +1,17 @@
 package web.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import java.util.List;
 
+@Component
 public class CarService {
 
-    private  List<Car> carList;
+    @Autowired
+    private Car car;
 
-    public CarService(){
-        carList = new Car().getCarList();
-    }
     public List<Car> getCar(int howMuchCar) {
-        return carList.subList(0,(howMuchCar-1)<5?howMuchCar:5);
+        return car.getCarList().subList(0,(howMuchCar-1)<5?howMuchCar:5);
     }
 }
