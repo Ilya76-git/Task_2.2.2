@@ -1,4 +1,4 @@
-package web.controller;
+package web.model;
 
 import org.springframework.stereotype.Component;
 
@@ -10,10 +10,6 @@ public class Car {
     private String marka;
     private String model;
     private int horsepower;
-
-    public List<Car> getCarList() {
-        return carList;
-    }
 
     private List<Car> carList;
 
@@ -42,5 +38,9 @@ public class Car {
 
     public int getHorsepower() {
         return horsepower;
+    }
+
+    public List<Car> getCarList() {
+        return carList;
     }
 }
